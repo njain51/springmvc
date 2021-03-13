@@ -11,44 +11,15 @@
 <title>Welcome to shopping Mall</title>
 </head>
 <body>
-	<h1>${message}</h1>
+	 
 
-	<%
-	String obj = (String) request.getAttribute("message");
-	%>
-	<h1>
-		Message is
-		<%=obj%></h1>
-
-	<!-- Getting List here -->
-
-	<%
-	List<String> obj1 = (List<String>)request.getAttribute("list");
-	%>
-    
-    <!-- Displaying List here -->
-	<h1>
-		List is
-		<%=obj1%></h1>
-    <!-- Displaying List here using for loop -->
-    
-	<%
-	for (String s : obj1) {
-	%>
-
-	<h1><%=s%></h1>
-
-	<%
-	}
-	%>
-	
-
-   <!-- Displaying List here using for loop in JSTL -->
-   
-   <c:forEach var="item" items="${list}">
-     <h1>${item}</h1>
-    </c:forEach>
-
+ <!-- Displaying User details -->
+    <h1>You Entered following Details here: </h1>
+      <h1>${name}</h1>
+      <h1>${email}</h1>
+      <h1>${age}</h1>
+ 
+  
 
 </body>
 </html>

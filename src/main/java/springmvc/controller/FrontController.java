@@ -1,10 +1,12 @@
 package springmvc.controller;
 import java.util.List;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
- 
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
 
 
@@ -50,6 +52,25 @@ public class FrontController {
 		   return "myfirstjsp";
 	}
 	
+ 
+	 @RequestMapping("/getdetails")
+	 public String getDetails() {
+		 return "getdetails";
+	 }
+	 
+	 @RequestMapping(path ="/processForm", method= RequestMethod.POST)
+	 public String processForm(@RequestParam String userName, @RequestParam int userAge ,@RequestParam String userEmail, Model model)  {
+		 System.out.println("user Name is " + userName);
+		 System.out.println("user Age is " + userAge);
+		 System.out.println("user Email is " + userEmail);
+		 
+		 model.addAttribute("email",userEmail);
+		 model.addAttribute("name",userName);		 
+		 model.addAttribute("age",userAge);
+		 
+		 
+		 return "myfirstjsp";
+	 }
 	 
 	
 }
