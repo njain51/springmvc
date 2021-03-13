@@ -1,7 +1,10 @@
 package springmvc.controller;
+import java.util.List;
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+ 
 import org.springframework.ui.Model;
 
 
@@ -14,8 +17,19 @@ public class FrontController {
 	{
 		   String str = "user has chosen shirt" ;
            model.addAttribute("message", str);
-		   
-		   return "myfirstjsp";
+           
+           // Adding List code: 
+           
+       		
+       		List<String> list1 = new ArrayList<String>();
+       		list1.add("Nitin");
+       		list1.add("Amit");
+       		list1.add("Myra");
+       		
+       	    model.addAttribute("list",list1);
+       	    return "myfirstjsp";
+       	   		
+  
 	}
     
 	@RequestMapping("/trousers")
@@ -35,6 +49,9 @@ public class FrontController {
 		   
 		   return "myfirstjsp";
 	}
+	
+	 
+	
 }
 
 
