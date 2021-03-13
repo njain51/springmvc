@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home page</title>
+<meta charset="ISO-8859-1">
+<title>Welcome to shopping Mall</title>
 </head>
 <body>
-<h2>Hello World New!</h2>
-<h2>This is Home page!</h2>
+<h1> ${message} </h1>
 </body>
 </html>

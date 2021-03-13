@@ -16,7 +16,7 @@
   </servlet>
   <servlet-mapping>
       <servlet-name>spring</servlet-name>
-      <url-pattern>/nitin/*</url-pattern>
+      <url-pattern>/shopping/*</url-pattern>
   </servlet-mapping>
   
   
